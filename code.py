@@ -72,4 +72,15 @@ class BullCallSpread:
         total_payoff = max(0,final_stock_price - self.strike_price_1) - max(0,final_stock_price - self.strike_price_2) - self.premium_1 + self.premium_2
         return total_payoff
 
-#test
+class BullPutSpread:
+    def __init__(self,initial_stock_price, strike_price_1, strike_price_2, premium_1, premium_2):
+        self.initial_stock_price = initial_stock_price
+        self.strike_price_1 = strike_price_1
+        self.strike_price_2 = strike_price_2 # strike_price_1 < strike_price_2
+        self.premium_1 = premium_1
+        self.premium_2 = premium_2
+
+    def payoff_BullPut_Spread(self, final_stock_price)
+        #Rappel Bull Put Spread --> long Put K1, short Put K2>K1
+        total_payoff = max(0,self.strike_price_1 - final_stock_price) - max(0,self.strike_price_2 - final_stock_price) - self.premium_1 + self.premium_2
+
