@@ -71,3 +71,5 @@ class BullCallSpread:
         #Rappel Bull Call Spread --> long call K1, short call K2, K1<K2
         total_payoff = max(0,final_stock_price - self.strike_price_1) - max(0,final_stock_price - self.strike_price_2) - self.premium_1 + self.premium_2
         return total_payoff
+
+#test
